@@ -74,9 +74,5 @@ if __name__ == "__main__":
         # undistord
         # img_undistorted = cv.undistort(ev_frame, K, dist_coeffs)
 
-        if i == 10:
-            print(start_time, end_time)
-            print(ev_frame)
-
-        np.save(out_path / str(i), ev_frame)
+        np.save(out_path / "{:.6f}".format(end_time), ev_frame)
         # np.save(out_path/str('un')/ str(i), img_undistorted)

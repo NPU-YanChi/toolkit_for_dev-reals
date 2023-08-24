@@ -31,8 +31,8 @@ topic_names={'rgb_topics':['/camera/color/image_raw'],
 
 cam_rgb_path=[path+filename+'/rgbd/'+'/rgb/']
 cam_depth_path=[path+filename+'/rgbd/'+'/depth/']
-davis_rgb_path=[path+filename+'/346/'+'/rgb/']
-davis_event_path=[path+filename+'/346/'+'/event/']
+davis_rgb_path=[path+filename+'/davis346/'+'/rgb/']
+davis_event_path=[path+filename+'/davis346/'+'/event/']
 
 # for camPath in cam_rgb_path:
 #     print(camPath)

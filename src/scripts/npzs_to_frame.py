@@ -59,7 +59,7 @@ if __name__ == "__main__":
     
     for i in tqdm(range(0, len(image_list))):
         if i >= args.winsz:
-            start_time = float(os.path.basename(image_list[i-10]).split(".")[0] + "." + os.path.basename(image_list[i-10]).split(".")[1])
+            start_time = float(os.path.basename(image_list[i-args.winsz]).split(".")[0] + "." + os.path.basename(image_list[i-args.winsz]).split(".")[1])
             end_time = float(os.path.basename(image_list[i]).split(".")[0] + "." + os.path.basename(image_list[i]).split(".")[1])
         else:
             start_time = float(os.path.basename(image_list[0]).split(".")[0] + "." + os.path.basename(image_list[0]).split(".")[1])

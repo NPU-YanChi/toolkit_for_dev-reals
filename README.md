@@ -7,5 +7,9 @@ check.py 用于检查读取是否有问题
 
 src 中代码用于得到event frame和可视化event frame
 
-## get the 
+## get the event trunk
 bash src/run.sh
+
+## get the event_truck vis
+bash src/vis.sh
+

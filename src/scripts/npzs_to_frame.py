@@ -51,10 +51,11 @@ if __name__ == "__main__":
     with open(args.intrinsic, 'r') as f:
         davis_data = yaml.safe_load(f)
     
-    size = np.array([davis_data['David346']['image_height'], davis_data['David346']['image_width']], dtype=np.int32)
+    size = np.array([davis_data['davis']['H'], davis_data['davis']['W']], dtype=np.int32)
     df, image_list = get_info(args.input, args.rgb, sort_by_num=False)
-    dist_coeffs = np.array(davis_data['David346']['distortion']['data'], dtype=np.float32)
-    K = np.array(davis_data['David346']['intrinsics']['data'], dtype=np.float32).reshape(3, 3)
+    dist_coeffs = np.array(davis_data['davis']['distortion'], dtype=np.float32)
+    fx, fy, cx, cy = davis_data['davis']['fx'], davis_data['davis']['fy'], davis_data['davis']['cx'], davis_data['davis']['cy']
+    K = np.array([[fx, 0, cx], [0, fy, cy], [0, 0, 1]], dtype=np.float32)
     print(f"=== start convert {args.input}, winsz {args.winsz}, size {size},  image_len {len(image_list)} ===")
     
     for i in tqdm(range(0, len(image_list))):

@@ -1,7 +1,7 @@
 import os
 
-datapath = "/home/pjlab/DATA/DEV-Reals/"
-squencename = "room1"
+datapath = "/DATA/DEV-Reals/"
+squencename = "test"
 folder_path = os.path.join(datapath, squencename, "rgbd/depth")
 pose_path = os.path.join(datapath, squencename, "pose", "pose.txt")
 

@@ -1,7 +1,5 @@
 import os
 
-
-
 def check_image_correspondence(folder1_path, folder2_path):
     cor_flag = True
     folder1_files = os.listdir(folder1_path)
@@ -30,8 +28,8 @@ def find_corresponding_file(file, file_list):
     return None
 
 # 检查两个文件夹中的图片是否具有对应关系
-folder1_path = "/home/pjlab/DATA/DEV-Reals/dorm2/rgbd/depth"
-folder2_path = "/home/pjlab/DATA/DEV-Reals/dorm2/rgbd/rgb"
+folder1_path = "/home/pjlab/yanchi/toolkit_for_dev-reals/Dev-Reals/dorm2/rgbd/depth"
+folder2_path = "/home/pjlab/yanchi/toolkit_for_dev-reals/Dev-Reals/dorm2/rgbd/rgb"
 correspondence1 = check_image_correspondence(folder1_path, folder2_path)
 correspondence2= check_image_correspondence(folder2_path, folder1_path)
 

@@ -136,7 +136,6 @@ class ImageCreator():
                     
                     
 if __name__ == '__main__':
-    # rospy.init_node(PKG)
     try:
         image_creator = ImageCreator()
         print("done")

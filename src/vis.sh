@@ -18,7 +18,7 @@ for input_dir in "${input_dirs[@]}"; do
   for winsz in "${winsz_values[@]}"; do
     # Define the input and output directories based on the input directory and winsz value
     input_dir_for_vis="${input_dir}/davis346/event_frame_${winsz}"
-    output_dir="${input_dir}_viz"
+    output_dir="${input_dir}/davis346/event_frame_${winsz}_vis"
 
     # Run the viz_ev_frame.py script with the appropriate arguments
     python /home/pjlab/yanchi/toolkit_for_dev-reals/src/scripts/viz_ev_frame.py \
